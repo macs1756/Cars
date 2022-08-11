@@ -235,3 +235,52 @@ btnAkardeon.forEach(item=>{
 })
 
 
+
+
+
+
+////forms
+
+
+
+const btnForm = document.querySelector(".form__btn");
+const formName = document.querySelector("#userName");
+const formEmail = document.querySelector("#userEmail");
+const formArea = document.querySelector("textarea");
+const formChebox = document.querySelector(".custom-checkbox");
+
+let regName = /^[а-яА-Яa-zA-ZЄ-ЯҐа-їґ]{3,}$/;
+let regEmail = /^[a-zA-Z0-9_]+@[a-z0-9-]+\.[a-z]{2,6}$/;
+let regArea = /[а-яА-Яa-zA-ZЄ-ЯҐа-їґ]{3,}/;
+
+
+
+
+btnForm.addEventListener("click", ()=>{
+	///name
+	if(regName.test(formName.value)){
+		formName.style.borderBottom = "1px solid green";
+	}else{
+		formName.style.borderBottom = "1px solid red";
+	}
+	//gmail
+	if(regEmail.test(formEmail.value)){
+		formEmail.style.borderBottom = "1px solid green";
+	}else{
+		formEmail.style.borderBottom = "1px solid red";
+	}
+	//textarea
+	if(regArea.test(formArea.value)){
+		formArea.style.borderBottom = "1px solid green";
+	}else{
+		formArea.style.borderBottom = "1px solid red";
+	}
+	//checkbox
+	if(formChebox.checked){
+		document.querySelector(".form__wr").classList.remove("checkbox__invalid");
+		document.querySelector(".form__wr").classList.add("checkbox__valid");
+	}else{
+		document.querySelector(".form__wr").classList.remove("checkbox__valid");
+		document.querySelector(".form__wr").classList.add("checkbox__invalid");
+	}
+});
