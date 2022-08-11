@@ -39,6 +39,7 @@ btnBurger.addEventListener("click", item =>{
 
 
 btnBurger.addEventListener("click", ()=>{
+		document.querySelector("body").classList.toggle("scrollNone");
 		burger.classList.toggle("burger__open-active");
 		btnBurger.classList.remove("header__burger_close");
 });

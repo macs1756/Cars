@@ -393,6 +393,10 @@ html {
   color: #fff;
 }
 
+.scrollNone {
+  overflow: hidden;
+}
+
 img {
   max-width: 100%;
 }
@@ -2000,14 +2004,18 @@ h3 {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    gap: 80px;
+    gap: 60px;
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
     width: 100%;
-    padding-top: 160px;
+    padding-top: 120px;
     padding-left: 55px;
     font-weight: 300;
+  }
+
+  .header__list-item {
+    font-size: 18px;
   }
 
   .header__language {
@@ -2084,6 +2092,43 @@ h3 {
     transition: all 0.5s linear;
   }
 
+  .close:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 20px;
+    left: 12px;
+    -webkit-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    -webkit-transition: all 0.5s linear;
+    -o-transition: all 0.5s linear;
+    transition: all 0.5s linear;
+  }
+
+  .close:before {
+    content: "";
+    display: block;
+    opacity: 0;
+    -webkit-transition: all 0.5s linear;
+    -o-transition: all 0.5s linear;
+    transition: all 0.5s linear;
+  }
+
+  .close span:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 20px;
+    left: 12px;
+    -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+    -webkit-transition: all 0.5s linear;
+    -o-transition: all 0.5s linear;
+    transition: all 0.5s linear;
+  }
+
   .burger__open {
     display: block;
     position: fixed;
@@ -2104,6 +2149,45 @@ h3 {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+
+  .close__burger {
+    width: 40px;
+    height: 40px;
+    display: block;
+    margin-top: 25px;
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+    margin-right: 15px;
+    position: relative;
+  }
+
+  .close__burger:after {
+    content: "";
+    display: block;
+    width: 24px;
+    height: 3px;
+    background-color: #fff;
+    position: absolute;
+    top: 16px;
+    left: 8px;
+    -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+
+  .close__burger:before {
+    content: "";
+    display: block;
+    width: 24px;
+    height: 3px;
+    background-color: #fff;
+    position: absolute;
+    top: 16px;
+    left: 8px;
+    -webkit-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+            transform: rotate(-45deg);
   }
 
   .program__title {
@@ -2225,82 +2309,6 @@ h3 {
         -ms-flex-direction: column;
             flex-direction: column;
     gap: 20px;
-  }
-
-  .close:after {
-    content: "";
-    display: block;
-    position: absolute;
-    top: 20px;
-    left: 12px;
-    -webkit-transform: rotate(-45deg);
-        -ms-transform: rotate(-45deg);
-            transform: rotate(-45deg);
-    -webkit-transition: all 0.5s linear;
-    -o-transition: all 0.5s linear;
-    transition: all 0.5s linear;
-  }
-
-  .close:before {
-    content: "";
-    display: block;
-    opacity: 0;
-    -webkit-transition: all 0.5s linear;
-    -o-transition: all 0.5s linear;
-    transition: all 0.5s linear;
-  }
-
-  .close span:after {
-    content: "";
-    display: block;
-    position: absolute;
-    top: 20px;
-    left: 12px;
-    -webkit-transform: rotate(45deg);
-        -ms-transform: rotate(45deg);
-            transform: rotate(45deg);
-    -webkit-transition: all 0.5s linear;
-    -o-transition: all 0.5s linear;
-    transition: all 0.5s linear;
-  }
-
-  .close__burger {
-    width: 40px;
-    height: 40px;
-    display: block;
-    margin-top: 25px;
-    -ms-flex-item-align: end;
-        align-self: flex-end;
-    margin-right: 15px;
-    position: relative;
-  }
-
-  .close__burger:after {
-    content: "";
-    display: block;
-    width: 24px;
-    height: 3px;
-    background-color: #fff;
-    position: absolute;
-    top: 16px;
-    left: 8px;
-    -webkit-transform: rotate(45deg);
-        -ms-transform: rotate(45deg);
-            transform: rotate(45deg);
-  }
-
-  .close__burger:before {
-    content: "";
-    display: block;
-    width: 24px;
-    height: 3px;
-    background-color: #fff;
-    position: absolute;
-    top: 16px;
-    left: 8px;
-    -webkit-transform: rotate(-45deg);
-        -ms-transform: rotate(-45deg);
-            transform: rotate(-45deg);
   }
 
   .burger__open-btn-item {
