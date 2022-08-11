@@ -5,8 +5,8 @@
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>ReadyOn</title>
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css?_v=20220811171734"/>
-	<link rel="stylesheet" href="css/style.min.css?_v=20220811171734">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css?_v=20220811183637"/>
+	<link rel="stylesheet" href="css/style.min.css?_v=20220811183637">
 	
 </head>
 <body>
@@ -27,7 +27,7 @@
 		</div>
 		<nav class="header__nav">
 
-			<ul data-da=".burger__open,767,0" class="header__list">
+			<ul class="header__list header__list-PC">
 				<li class="header__list-item header__list-itemMobile"><a href="gg.fg.ua" class="header__list-link">Трек-дни</a></li>
 				<li class="header__list-item"><a href="gg.fg.ua" class="header__list-link">Спорткары</a></li>
 				<li class="header__list-item"><a href="gg.fg.ua" class="header__list-link">Сертификаты</a></li>
@@ -56,7 +56,14 @@
 
 
 		<div class="header__burger"><span></span></div>
-		<div class="burger__open"></div>
+		<div class="burger__open">
+			<ul data-da=".burger__open,767,0" class="header__list">
+				<li class="header__list-item header__list-itemMobile"><a href="gg.fg.ua" class="header__list-link">Трек-дни</a></li>
+				<li class="header__list-item"><a href="gg.fg.ua" class="header__list-link">Спорткары</a></li>
+				<li class="header__list-item"><a href="gg.fg.ua" class="header__list-link">Сертификаты</a></li>
+				<li class="header__list-item"><a href="gg.fg.ua" class="header__list-link">Как проходят заезды</a></li>
+			</ul>
+		</div>
 		</div>
 	</div>		
 	</div>
@@ -88,7 +95,7 @@
 
 
 			<div class="initial__btn">
-				<a href="www.bb.ua" class="initial__btn-item btn">Заказать</a>
+				<button class="initial__btn-item btn modalActive">Заказать</button>
 			</div>
 			
 			
@@ -297,7 +304,7 @@
 		</section>
 
 		<div class="program__wr-btn">
-			<a href="gg.gg.ua" class="btn program__btn">ЗАКАЗАТЬ</a>
+			<button class="btn program__btn modalActive">ЗАКАЗАТЬ</button>
 		</div>
 
 
@@ -390,7 +397,7 @@
 					
 		</div>
 		<div class="cars__bottom">
-			<a href="gg.ui.ua" class="cars__bottom-btn btn">ЗАКАЗАТЬ</a>	
+			<button  class="cars__bottom-btn btn modalActive">ЗАКАЗАТЬ</button>	
 			<div class="cars__bottom-text">От 200 € за программу</div>		
 		</div>
 		
@@ -414,7 +421,7 @@
 					<li class="certificates__list-item">Подарочный сертификат доступен в виде программы или депозита на определённую сумму</li>
 				</ul>
 				<div class="certificates__btn-wr">
-					<a href="yyy.ii"  class="certificates__btn-pay btn">ЗАКАЗАТЬ</a>
+					<button  class="certificates__btn-pay btn modalActive">ЗАКАЗАТЬ</button>
 					<a href="xt.ua" class="certificates__btn-more btn">ПОДРОБНЕЕ</a>
 					
 				</div>
@@ -728,9 +735,6 @@
 
 </main>
 
-
-
-
 <footer>
 	<div class="content">
 		<div class="footer">
@@ -746,13 +750,17 @@
 		
 	</div>
 </footer>
-
-
-
 </div>
-<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js?_v=20220811171734"></script>
+<div class="modal__wr">
+	<div class="modal__body">
+		<div class="modal__text">Modal window under construction</div>
+	</div>	
+</div>
 
-<script src="js/app.js?_v=20220811171734"></script>
-<script src="js/dynamicAdapt.js?_v=20220811171734"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js?_v=20220811183637"></script>
+
+<script src="js/app.js?_v=20220811183637"></script>
+
 </body>
 </html>

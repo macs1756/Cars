@@ -284,4 +284,45 @@ btnForm.addEventListener("click", ()=>{
 		document.querySelector(".form__wr").classList.remove("checkbox__valid");
 		document.querySelector(".form__wr").classList.add("checkbox__invalid");
 	}
+
+
+	if(regName.test(formName.value) && regEmail.test(formEmail.value) && regArea.test(formArea.value) && formChebox.checked) {
+		modalWr.classList.add("modal__wr-active");
+		modalContent.classList.add("modal__body-open");
+	}
+
+
+
+
+
+
+
+
+
+
+
+
 });
+
+
+////////////modal
+
+
+
+let btnModal = document.querySelectorAll(".modalActive");
+const modalWr = document.querySelector(".modal__wr");
+const modalContent = document.querySelector(".modal__body");
+
+
+btnModal.forEach(item=>{
+	item.addEventListener("click", ()=>{
+		modalWr.classList.add("modal__wr-active");
+		modalContent.classList.add("modal__body-open");
+	});
+});
+
+
+modalWr.addEventListener("click", function(event){
+	modalWr.classList.remove("modal__wr-active");
+	modalContent.classList.remove("modal__body-open");
+})

@@ -146,6 +146,12 @@ header {
   font-weight: 600;
 }
 
+.header__list-PC {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .no-webp .initial {
   background: url("../img/initial.jpg") center/cover no-repeat; }
 
@@ -467,6 +473,67 @@ h3 {
   line-height: 100%;
 }
 
+.modal__wr {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+
+.modal__wr-active {
+  -webkit-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+  opacity: 1;
+  pointer-events: all;
+}
+
+.modal__body {
+  width: 290px;
+  background-color: #fff;
+  color: #060606;
+  height: 100px;
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transform: perspective(600px) translate(0px, -400%) rotateX(110deg);
+          transform: perspective(600px) translate(0px, -400%) rotateX(110deg);
+  -webkit-transition: all 0.5s linear;
+  -o-transition: all 0.5s linear;
+  transition: all 0.5s linear;
+}
+
+.modal__body-open {
+  -webkit-transform: perspective(600px) translate(0px, 0%) rotateX(0deg);
+          transform: perspective(600px) translate(0px, 0%) rotateX(0deg);
+  -webkit-transition: all 0.5s linear;
+  -o-transition: all 0.5s linear;
+  transition: all 0.5s linear;
+}
+
 .header__burger {
   display: none;
 }
@@ -478,7 +545,11 @@ h3 {
   -webkit-transition: all 0.5s linear;
   -o-transition: all 0.5s linear;
   transition: all 0.5s linear;
-  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
 }
 
 .burger__open-active {
@@ -2033,6 +2104,10 @@ h3 {
     display: none;
   }
 
+  .header__list-PC {
+    display: none;
+  }
+
   .header__burger {
     z-index: 50;
     position: relative;
@@ -2130,7 +2205,6 @@ h3 {
   }
 
   .burger__open {
-    display: block;
     position: fixed;
     top: 0;
     left: 0;
